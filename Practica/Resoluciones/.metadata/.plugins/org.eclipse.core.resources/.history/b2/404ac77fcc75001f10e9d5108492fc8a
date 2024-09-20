@@ -1,0 +1,12 @@
+package Clases;
+
+public interface Figuras {
+	
+	public double getDiametro();
+	
+	public double getArea();
+	
+	public double getPerimetro();
+	
+	
+}

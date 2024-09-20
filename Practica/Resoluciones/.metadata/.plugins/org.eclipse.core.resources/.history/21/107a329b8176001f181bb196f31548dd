@@ -1,0 +1,23 @@
+package Clases;
+
+public class Cuerpo3D {
+	private double altura;
+	private Figuras CaraBasal;
+	
+	
+	public void setCaraBasal(Figuras cara) {
+		this.CaraBasal = cara;
+	}
+	
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+	
+	public double getVolumen() {
+		return(altura * this.CaraBasal.getArea());
+	}
+	
+	public double getSuperficie() {
+		
+	}
+}
