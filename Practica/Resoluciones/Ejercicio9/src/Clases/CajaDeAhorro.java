@@ -1,12 +1,11 @@
 package Clases;
 
 public class CajaDeAhorro extends Cuenta{
-	private double saldo;
 	
 	
 	
 	public CajaDeAhorro() {
-		this.saldo = 0;
+		super();	
 	}
 	
 	public boolean puedeExtraer(double monto) {

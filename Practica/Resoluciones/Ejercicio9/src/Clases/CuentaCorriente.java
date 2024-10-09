@@ -1,12 +1,11 @@
 package Clases;
 
 public class CuentaCorriente extends Cuenta{
-	private double saldo;
 	private double limite;
 	
 	
 	public CuentaCorriente() {
-		this.saldo = 0;
+		super();
 		this.limite = 0;
 	}
 
