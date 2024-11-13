@@ -31,6 +31,7 @@ public class DateLapse {
 	}
 	
 	public boolean overlaps(DateLapse lapso) {
-		return(this.includesDate(lapso.getFrom()) || this.includesDate(lapso.getTo()) || lapso.includesDate(getFrom()) || lapso.includesDate(getTo()));
+		return(this.includesDate(lapso.getFrom()) || this.includesDate(lapso.getTo()) 
+				|| lapso.includesDate(getFrom()) || lapso.includesDate(getTo()));
 	}
 }

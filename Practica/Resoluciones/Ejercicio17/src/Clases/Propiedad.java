@@ -2,7 +2,7 @@ package Clases;
 
 import java.util.ArrayList;
 import 	Clases.Ejercicio18.*;
-
+import java.util.Iterator;
 
 public class Propiedad {
 	private String direccion;
@@ -55,9 +55,11 @@ public class Propiedad {
 	
 	public double recaudacion(DateLapse lapso) {
 		double total = 0;
-		for (int i = 0; i < reservas.size(); i++) {
-			if(lapso.overlaps(this.reservas.get(i).getLapso())) {
-				total+= this.reservas.get(i).precio();
+		Iterator<Reserva> iterador = reservas.iterator();
+		while(iterador.hasNext()) {
+			Reserva aux = iterador.next();
+			if(lapso.overlaps(aux.getLapso())) {
+				total+= aux.precio();
 			}
 		}
 		return total;

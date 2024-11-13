@@ -1,6 +1,7 @@
 package Clases;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Usuario {
 	private String nombre;
@@ -27,8 +28,9 @@ public class Usuario {
 	
 	public double ingresos(DateLapse lapso) {
 		double total = 0;
-		for(int i = 0; i < propiedades.size(); i++) {
-			total+= propiedades.get(i).recaudacion(lapso);
+		Iterator<Propiedad> iterador = propiedades.iterator();
+		while (iterador.hasNext()) {
+			total+= iterador.next().recaudacion(lapso);
 		}
 		return total*0.75;
 	}
