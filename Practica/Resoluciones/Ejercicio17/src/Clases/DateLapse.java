@@ -27,7 +27,7 @@ public class DateLapse {
 	}
 	
 	public boolean includesDate(LocalDate other) {
-		return (other.isAfter(from) && other.isBefore(to));
+		return (other.isAfter(from.minusDays(1)) && other.isBefore(to.plusDays(1)));
 	}
 	
 	public boolean overlaps(DateLapse lapso) {
